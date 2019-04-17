@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--当引入vue.js之后，在全局环境会注册一个vue构造函数-->
+  <!--设计模式：mvvn mvp mvc-->
+  <script src="./js/vue.js"></script>
+</head>
+<body>
+<div id="app">{{msg}}</div>
+<script>
+//  声明式编程
+  var vm=new Vue({
+   el:'#app',
+    data:{
+     msg:'hello word!'
+    }
+  })
+</script>
+</body>
+</html>
