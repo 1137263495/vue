@@ -33,7 +33,8 @@
         成员创建分支跟踪远程分支(master分支不用创建)
             git checkout -b [branch] [remotename]/[branch]
         先建本地分支
-            git checkout -b [branch]   
+            git checkout -b [branch]
+        跟踪远程分支
             git branch -u [remotename]/[branch]
       成员拉取数据(对应分支)
         git pull  
