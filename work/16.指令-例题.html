@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="app" >
+  <ul>
+    <li v-for="(item,index) in arr">
+      {{index}}--{{item.name}}---{{item.age}}---{{item.sex}}
+      <button v-on:click="del(index)">del</button>
+      <button v-on:click="update(index)">update</button>
+    </li>
+  </ul>
+</div>
+<script>
+  var vm=new Vue({
+    el:'#app',
+    data:{
+     arr:[
+       {
+         name:'a',
+         age:17,
+         sex:'nan'
+       },{
+         name:'b',
+         age:18,
+         sex:'nan'
+       },{
+         name:'c',
+         age:19,
+         sex:'nan'
+       },{
+         name:'d',
+         age:12,
+         sex:'nan'
+       }
+     ]
+    },
+    methods:{
+      del(index){
+        this.arr.splice(index,1)
+      },
+      update(index){
+        this.arr.splice(index,1,{
+          name:'a',
+          age:11,
+          sex:'nv'
+        })
+      }
+    }
+  })
+</script>
+</body>
+</html>
