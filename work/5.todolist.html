@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--当引入vue.js之后，在全局环境会注册一个vue构造函数-->
+  <!--设计模式：mvvn mvp mvc-->
+  <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <input type="text" v-model="name">
+  <button v-on:click="handleC">add</button>
+  <ul>
+    <li v-for="item in items">
+      {{item}}
+    </li>
+  </ul>
+</div>
+<script>
+  var vm=new Vue({
+    el:'#app',
+    data:{
+     name:'',
+      items:[]
+    },
+    methods: {
+      handleC(){
+        this.items.push(this.name)
+        this.name=''
+      }
+    }
+  })
+</script>
+</body>
+</html>
